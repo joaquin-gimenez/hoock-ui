@@ -1,2 +1,61 @@
-body div {
-  color: black; }
+body {
+  background-color: lightgray; }
+
+.display-block {
+  display: block; }
+
+.text-center {
+  text-align: center; }
+
+.no-margin {
+  margin: 0; }
+
+.profile-overview,
+.profile-about,
+.profile-ranking,
+.profile-skills {
+  background-color: #fff;
+  margin-bottom: 20px; }
+
+.profile-intro {
+  display: flex;
+  align-items: center; }
+  .profile-intro .img-profile {
+    padding-right: 25px; }
+
+.profile-about-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+input.readonly {
+  border: none; }
+  input.readonly:focus {
+    outline: none;
+    cursor: default; }
+
+.before-content:before {
+  content: "";
+  display: table; }
+
+.profile-padding-base {
+  padding: 30px; }
+
+.profile-padding-base-tops {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.profile-padding-base-bottom-half {
+  padding-bottom: 15px; }
+
+.profile-padding-base-top-half {
+  padding-top: 15px; }
+
+.profile-data-item {
+  color: #7599AD;
+  font-weight: bold;
+  font-size: 30px; }
+
+@media (min-width: 992px) {
+  .profile-left-wrapper {
+    padding-right: 0; } }
