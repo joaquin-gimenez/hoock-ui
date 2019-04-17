@@ -1,5 +1,6 @@
 body {
-  background-color: lightgray; }
+  background-color: lightgray;
+  font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important; }
 
 .display-block {
   display: block; }
