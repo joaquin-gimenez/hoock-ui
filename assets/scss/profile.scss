@@ -2,97 +2,262 @@
 // Fonts
 // --------------------------------------------------
 
-$body-font-family:                   "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$bold-font-family:                   "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$medium-font-family:                 "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$button-font:                        "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$header-font-family:                 "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$footer-title-font-family:           "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$footer-body-font-family:            "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$banner-font-family:                 "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$course-card-title-font-family:      "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$course-card-body-font-family:       "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$search-title-font-family:           "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$button-font-family:                 "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$input-font-family:                  "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$body-font-family: "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$bold-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$medium-font-family: "Avenir Medium", Helvetica, Arial, Nimbus Sans L,
+  sans-serif !important;
+$button-font: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$header-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$footer-title-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L,
+  sans-serif !important;
+$footer-body-font-family: "Avenir Book", Helvetica, Arial, Nimbus Sans L,
+  sans-serif !important;
+$banner-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$course-card-title-font-family: "Avenir Medium", Helvetica, Arial, Nimbus Sans L,
+  sans-serif !important;
+$course-card-body-font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L,
+  sans-serif !important;
+$search-title-font-family: "Avenir Medium", Helvetica, Arial, Nimbus Sans L,
+  sans-serif !important;
+$button-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$input-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
 
+$avenir-book: "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$avenir-heavy: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$avenir-medium: "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+$avenir-roman: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
 
-$avenir-book:                   "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$avenir-heavy:                   "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$avenir-medium:                 "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$avenir-roman:       "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+@font-face {
+  font-family: "Glyphicons Halflings";
+  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"),
+    url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"),
+    url("../fonts/bootstrap/glyphicons-halflings-regular.ttf")
+      format("truetype"),
+    url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")
+      format("svg");
+}
 
-$gray-blue: #7599AD;
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-pencil:before {
+  content: "\270f";
+}
+
+.avenir-book {
+  font-family: $avenir-book;
+}
+.avenir-heavy {
+  font-family: $avenir-heavy;
+}
+.avenir-medium {
+  font-family: $avenir-medium;
+}
+.avenir-roman {
+  font-family: $avenir-roman;
+}
+
+$course-card-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.1);
+$gray-blue: #7599ad;
+$gray: #6e7e8c;
+$light-gray: #e8e8e8;
 $padding-base: 30px;
 
-body{
-  background-color: lightgray;
-  font-family: $input-font-family;
-}
-.display-block {
-  display: block;
-}
-.text-center{
-  text-align: center;
-}
-.no-margin {
-  margin: 0;
-}
-.profile-overview,
-.profile-about,
-.profile-ranking,
-.profile-skills{
-  background-color: #fff;
-  margin-bottom: 20px;
-}
-
-.profile-intro {
-  display: flex;
-  align-items: center;
-  .img-profile {
-    padding-right: 25px;
-  }
-}
-.profile-about-title {
-  display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-input.readonly{
-  border: none;
-  &:focus{
-    outline: none;
-    cursor: default;   
-  }
-}
-
-.before-content:before{
+.before-content:before {
   content: "";
   display: table;
 }
 
 .profile-padding-base {
- padding: $padding-base; 
-}
-.profile-padding-base-tops {
-  padding-top: $padding-base; 
-  padding-bottom: $padding-base; 
- }
- .profile-padding-base-bottom-half{
-   padding-bottom: 15px;
- }
- .profile-padding-base-top-half{
-  padding-top: 15px;
-}
-.profile-data-item {
-  color: $gray-blue;
-  font-weight: bold;
-  font-size: 30px;
+  padding: $padding-base;
 }
 
-@media (min-width:992px) {
-  .profile-left-wrapper{
-    padding-right:0;
+body {
+  background-color: #fff;
+  font-family: $input-font-family;
+}
+
+.display-block {
+  display: block;
+}
+.text-center {
+  text-align: center;
+}
+.no-margin {
+  margin: 0;
+}
+
+.profile-container {
+  padding-top: $padding-base;
+  padding-bottom: $padding-base;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $avenir-roman;
+    font-weight: normal;
+  }
+
+  .profile-overview,
+  .profile-about,
+  .profile-ranking,
+  .profile-skills {
+    box-shadow: $course-card-box-shadow;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+  .profile-overview,
+  .profile-ranking {
+    height: 650px;
+  }
+
+  .profile-about,
+  .profile-skills {
+    height: 400px;
+  }
+
+  .edit-btn {
+    color: $gray;
+    cursor: pointer;
+    span {
+      font-family: $avenir-roman;
+      margin-right: 5px;
+    }
+    i {
+      border: 2px solid $light-gray;
+      border-radius: 5px;
+      padding: 7px;
+    }
+  }
+
+  .intro {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    .intro__img {
+      padding-right: 25px;
+      img {
+        border: 3px solid $gray;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .intro__name {
+      font-size: 40px;
+      display: block;
+      font-family: $avenir-roman;
+    }
+    .intro__company {
+      display: block;
+      font-family: $avenir-roman;
+      color: $gray;
+      font-size: 16px;
+    }
+  }
+  .achievements {
+    h3 {
+      margin-top: 55px;
+      margin-bottom: 30px;
+    }
+    .achievements__data {
+      .achievements__data--title {
+        display: block;
+        font-family: $avenir-roman;
+        color: $gray;
+      }
+      .achievements__data--number {
+        display: block;
+        color: $gray-blue;
+        font-family: $avenir-roman;
+        font-size: 50px;
+      }
+    }
+  }
+
+  .badges {
+    h3 {
+      margin-top: 80px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .profile-about {
+    .profile-about-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .profile-about-field-wrapper {
+      padding-bottom: 30px;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      color: $gray;
+      font-family: $avenir-book;
+    }
+
+    input {
+      display: block;
+      font-family: $avenir-roman;
+      font-size: 16px;
+    }
+
+    input.readonly {
+      border: none;
+      &:focus {
+        outline: none;
+        cursor: default;
+      }
+    }
+  }
+
+  .profile__data {
+    padding-top: 15px;
+    .profile__data--title {
+      display: block;
+      font-family: $avenir-roman;
+      color: $gray;
+    }
+    .profile__data--number {
+      display: block;
+      color: $gray-blue;
+      font-family: $avenir-roman;
+      font-size: 50px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .profile-container {
+    .profile__left {
+      padding-right: 0;
+    }
+    .badges {
+      .badges__imgs {
+        display: flex;
+        justify-content: space-evenly;
+        img {
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
   }
 }

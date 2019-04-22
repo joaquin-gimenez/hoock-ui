@@ -1,5 +1,43 @@
+@font-face {
+  font-family: "Glyphicons Halflings";
+  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-pencil:before {
+  content: "\270f"; }
+
+.avenir-book {
+  font-family: "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important; }
+
+.avenir-heavy {
+  font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important; }
+
+.avenir-medium {
+  font-family: "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important; }
+
+.avenir-roman {
+  font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important; }
+
+.before-content:before {
+  content: "";
+  display: table; }
+
+.profile-padding-base {
+  padding: 30px; }
+
 body {
-  background-color: lightgray;
+  background-color: #fff;
   font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important; }
 
 .display-block {
@@ -11,52 +49,114 @@ body {
 .no-margin {
   margin: 0; }
 
-.profile-overview,
-.profile-about,
-.profile-ranking,
-.profile-skills {
-  background-color: #fff;
-  margin-bottom: 20px; }
-
-.profile-intro {
-  display: flex;
-  align-items: center; }
-  .profile-intro .img-profile {
-    padding-right: 25px; }
-
-.profile-about-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-input.readonly {
-  border: none; }
-  input.readonly:focus {
-    outline: none;
-    cursor: default; }
-
-.before-content:before {
-  content: "";
-  display: table; }
-
-.profile-padding-base {
-  padding: 30px; }
-
-.profile-padding-base-tops {
+.profile-container {
   padding-top: 30px;
   padding-bottom: 30px; }
-
-.profile-padding-base-bottom-half {
-  padding-bottom: 15px; }
-
-.profile-padding-base-top-half {
-  padding-top: 15px; }
-
-.profile-data-item {
-  color: #7599AD;
-  font-weight: bold;
-  font-size: 30px; }
+  .profile-container h1,
+  .profile-container h2,
+  .profile-container h3,
+  .profile-container h4,
+  .profile-container h5,
+  .profile-container h6 {
+    font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+    font-weight: normal; }
+  .profile-container .profile-overview,
+  .profile-container .profile-about,
+  .profile-container .profile-ranking,
+  .profile-container .profile-skills {
+    box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 20px; }
+  .profile-container .profile-overview,
+  .profile-container .profile-ranking {
+    height: 650px; }
+  .profile-container .profile-about,
+  .profile-container .profile-skills {
+    height: 400px; }
+  .profile-container .edit-btn {
+    color: #6e7e8c;
+    cursor: pointer; }
+    .profile-container .edit-btn span {
+      font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+      margin-right: 5px; }
+    .profile-container .edit-btn i {
+      border: 2px solid #e8e8e8;
+      border-radius: 5px;
+      padding: 7px; }
+  .profile-container .intro {
+    display: flex;
+    align-items: center;
+    margin: 0; }
+    .profile-container .intro .intro__img {
+      padding-right: 25px; }
+      .profile-container .intro .intro__img img {
+        border: 3px solid #6e7e8c;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px; }
+    .profile-container .intro .intro__name {
+      font-size: 40px;
+      display: block;
+      font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important; }
+    .profile-container .intro .intro__company {
+      display: block;
+      font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+      color: #6e7e8c;
+      font-size: 16px; }
+  .profile-container .achievements h3 {
+    margin-top: 55px;
+    margin-bottom: 30px; }
+  .profile-container .achievements .achievements__data .achievements__data--title {
+    display: block;
+    font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+    color: #6e7e8c; }
+  .profile-container .achievements .achievements__data .achievements__data--number {
+    display: block;
+    color: #7599ad;
+    font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+    font-size: 50px; }
+  .profile-container .badges h3 {
+    margin-top: 80px;
+    margin-bottom: 30px; }
+  .profile-container .profile-about .profile-about-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .profile-container .profile-about .profile-about-field-wrapper {
+    padding-bottom: 30px; }
+  .profile-container .profile-about label {
+    display: block;
+    font-size: 12px;
+    color: #6e7e8c;
+    font-family: "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important; }
+  .profile-container .profile-about input {
+    display: block;
+    font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+    font-size: 16px; }
+  .profile-container .profile-about input.readonly {
+    border: none; }
+    .profile-container .profile-about input.readonly:focus {
+      outline: none;
+      cursor: default; }
+  .profile-container .profile__data {
+    padding-top: 15px; }
+    .profile-container .profile__data .profile__data--title {
+      display: block;
+      font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+      color: #6e7e8c; }
+    .profile-container .profile__data .profile__data--number {
+      display: block;
+      color: #7599ad;
+      font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+      font-size: 50px; }
 
 @media (min-width: 992px) {
-  .profile-left-wrapper {
-    padding-right: 0; } }
+  .profile-container .profile__left {
+    padding-right: 0; }
+  .profile-container .badges .badges__imgs {
+    display: flex;
+    justify-content: space-evenly; }
+    .profile-container .badges .badges__imgs img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px; } }
