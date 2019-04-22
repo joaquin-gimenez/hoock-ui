@@ -54,6 +54,9 @@ $avenir-roman: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !impo
 .glyphicon-pencil:before {
   content: "\270f";
 }
+.glyphicon-remove:before {
+  content: "\e014";
+}
 
 .avenir-book {
   font-family: $avenir-book;
@@ -91,6 +94,9 @@ body {
 .display-block {
   display: block;
 }
+.display-none {
+  display: none;
+}
 .text-center {
   text-align: center;
 }
@@ -120,15 +126,6 @@ body {
     background-color: #fff;
     margin-bottom: 20px;
   }
-  .profile-overview,
-  .profile-ranking {
-    height: 650px;
-  }
-
-  .profile-about,
-  .profile-skills {
-    height: 400px;
-  }
 
   .edit-btn {
     color: $gray;
@@ -145,17 +142,18 @@ body {
   }
 
   .intro {
-    display: flex;
-    align-items: center;
     margin: 0;
     .intro__img {
-      padding-right: 25px;
+      text-align: center;
       img {
         border: 3px solid $gray;
         border-radius: 50%;
         width: 100px;
         height: 100px;
       }
+    }
+    .intro__text {
+      text-align: center;
     }
     .intro__name {
       font-size: 40px;
@@ -175,6 +173,8 @@ body {
       margin-bottom: 30px;
     }
     .achievements__data {
+      text-align: left;
+      margin-top: 30px; 
       .achievements__data--title {
         display: block;
         font-family: $avenir-roman;
@@ -185,6 +185,7 @@ body {
         color: $gray-blue;
         font-family: $avenir-roman;
         font-size: 50px;
+        line-height: 60px;
       }
     }
   }
@@ -193,6 +194,36 @@ body {
     h3 {
       margin-top: 80px;
       margin-bottom: 30px;
+    }
+    .badges__imgs {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      & > div {
+        flex: 0 50%;
+        width: 100%;
+        &:nth-child(odd) {
+          text-align: right;
+          img {
+            margin-right: 30px;
+          }
+        }
+        &:nth-child(even) {
+          text-align: left;
+          img {
+            margin-left: 30px;
+          }
+        }
+      }
+        img {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+        }
+      
     }
   }
 
@@ -243,19 +274,85 @@ body {
   }
 }
 
+
+@media (min-width: 768px) {
+  .profile-container {
+    .achievements {
+      .achievements__data {
+        margin-top: 0;
+      }
+    }
+    .intro {
+      display: flex;
+      align-items: center;
+      .intro__img {
+        padding-right: 25px;
+      }
+      .intro__text {
+        text-align: left;
+      }
+    }
+    .badges {
+      .badges__imgs{
+        display: block;
+        & > div {
+          display: inline;
+          img {
+            margin: 0 50px 0 0 !important;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+
 @media (min-width: 992px) {
+  .profile-overview,
+  .profile-ranking {
+    height: 650px;
+  }
+
+  .profile-about,
+  .profile-skills {
+    height: 400px;
+  }
+
   .profile-container {
     .profile__left {
       padding-right: 0;
     }
+    .achievements{
+      .achievements__data {
+        text-align: left;
+      }
+    } 
     .badges {
       .badges__imgs {
-        display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
-        img {
-          border-radius: 50%;
-          width: 100px;
-          height: 100px;
+        & > div {
+          display: inline;
+          img {
+            margin-right: 30px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+
+  .profile-container {
+    .badges {
+      .badges__imgs {
+        & > div {
+          img {
+            margin-right: 60px !important;
+          }
         }
       }
     }

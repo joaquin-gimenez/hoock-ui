@@ -17,6 +17,9 @@
 .glyphicon-pencil:before {
   content: "\270f"; }
 
+.glyphicon-remove:before {
+  content: "\e014"; }
+
 .avenir-book {
   font-family: "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important; }
 
@@ -43,6 +46,9 @@ body {
 .display-block {
   display: block; }
 
+.display-none {
+  display: none; }
+
 .text-center {
   text-align: center; }
 
@@ -67,12 +73,6 @@ body {
     box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     margin-bottom: 20px; }
-  .profile-container .profile-overview,
-  .profile-container .profile-ranking {
-    height: 650px; }
-  .profile-container .profile-about,
-  .profile-container .profile-skills {
-    height: 400px; }
   .profile-container .edit-btn {
     color: #6e7e8c;
     cursor: pointer; }
@@ -84,16 +84,16 @@ body {
       border-radius: 5px;
       padding: 7px; }
   .profile-container .intro {
-    display: flex;
-    align-items: center;
     margin: 0; }
     .profile-container .intro .intro__img {
-      padding-right: 25px; }
+      text-align: center; }
       .profile-container .intro .intro__img img {
         border: 3px solid #6e7e8c;
         border-radius: 50%;
         width: 100px;
         height: 100px; }
+    .profile-container .intro .intro__text {
+      text-align: center; }
     .profile-container .intro .intro__name {
       font-size: 40px;
       display: block;
@@ -106,18 +106,44 @@ body {
   .profile-container .achievements h3 {
     margin-top: 55px;
     margin-bottom: 30px; }
-  .profile-container .achievements .achievements__data .achievements__data--title {
-    display: block;
-    font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-    color: #6e7e8c; }
-  .profile-container .achievements .achievements__data .achievements__data--number {
-    display: block;
-    color: #7599ad;
-    font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-    font-size: 50px; }
+  .profile-container .achievements .achievements__data {
+    text-align: left;
+    margin-top: 30px; }
+    .profile-container .achievements .achievements__data .achievements__data--title {
+      display: block;
+      font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+      color: #6e7e8c; }
+    .profile-container .achievements .achievements__data .achievements__data--number {
+      display: block;
+      color: #7599ad;
+      font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
+      font-size: 50px;
+      line-height: 60px; }
   .profile-container .badges h3 {
     margin-top: 80px;
     margin-bottom: 30px; }
+  .profile-container .badges .badges__imgs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center; }
+    .profile-container .badges .badges__imgs > div {
+      flex: 0 50%;
+      width: 100%; }
+      .profile-container .badges .badges__imgs > div:nth-child(odd) {
+        text-align: right; }
+        .profile-container .badges .badges__imgs > div:nth-child(odd) img {
+          margin-right: 30px; }
+      .profile-container .badges .badges__imgs > div:nth-child(even) {
+        text-align: left; }
+        .profile-container .badges .badges__imgs > div:nth-child(even) img {
+          margin-left: 30px; }
+    .profile-container .badges .badges__imgs img {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px; }
   .profile-container .profile-about .profile-about-title {
     display: flex;
     justify-content: space-between;
@@ -150,13 +176,42 @@ body {
       font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
       font-size: 50px; }
 
+@media (min-width: 768px) {
+  .profile-container .achievements .achievements__data {
+    margin-top: 0; }
+  .profile-container .intro {
+    display: flex;
+    align-items: center; }
+    .profile-container .intro .intro__img {
+      padding-right: 25px; }
+    .profile-container .intro .intro__text {
+      text-align: left; }
+  .profile-container .badges .badges__imgs {
+    display: block; }
+    .profile-container .badges .badges__imgs > div {
+      display: inline; }
+      .profile-container .badges .badges__imgs > div img {
+        margin: 0 50px 0 0 !important; } }
+
 @media (min-width: 992px) {
+  .profile-overview,
+  .profile-ranking {
+    height: 650px; }
+  .profile-about,
+  .profile-skills {
+    height: 400px; }
   .profile-container .profile__left {
     padding-right: 0; }
+  .profile-container .achievements .achievements__data {
+    text-align: left; }
   .profile-container .badges .badges__imgs {
-    display: flex;
+    flex-direction: row;
     justify-content: space-evenly; }
-    .profile-container .badges .badges__imgs img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px; } }
+    .profile-container .badges .badges__imgs > div {
+      display: inline; }
+      .profile-container .badges .badges__imgs > div img {
+        margin-right: 30px !important; } }
+
+@media (min-width: 1200px) {
+  .profile-container .badges .badges__imgs > div img {
+    margin-right: 60px !important; } }
