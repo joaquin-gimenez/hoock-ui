@@ -1,110 +1,5 @@
-// --------------------------------------------------
-// Fonts
-// --------------------------------------------------
-
-$body-font-family: "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$bold-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$medium-font-family: "Avenir Medium", Helvetica, Arial, Nimbus Sans L,
-  sans-serif !important;
-$button-font: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$header-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$footer-title-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L,
-  sans-serif !important;
-$footer-body-font-family: "Avenir Book", Helvetica, Arial, Nimbus Sans L,
-  sans-serif !important;
-$banner-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$course-card-title-font-family: "Avenir Medium", Helvetica, Arial, Nimbus Sans L,
-  sans-serif !important;
-$course-card-body-font-family: "Avenir Roman", Helvetica, Arial, Nimbus Sans L,
-  sans-serif !important;
-$search-title-font-family: "Avenir Medium", Helvetica, Arial, Nimbus Sans L,
-  sans-serif !important;
-$button-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$input-font-family: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-
-$avenir-book: "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$avenir-heavy: "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$avenir-medium: "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$avenir-roman: "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-
-@font-face {
-  font-family: "Glyphicons Halflings";
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"),
-    url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"),
-    url("../fonts/bootstrap/glyphicons-halflings-regular.ttf")
-      format("truetype"),
-    url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")
-      format("svg");
-}
-
-.glyphicon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: "Glyphicons Halflings";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.glyphicon-pencil:before {
-  content: "\270f";
-}
-.glyphicon-remove:before {
-  content: "\e014";
-}
-
-.avenir-book {
-  font-family: $avenir-book;
-}
-.avenir-heavy {
-  font-family: $avenir-heavy;
-}
-.avenir-medium {
-  font-family: $avenir-medium;
-}
-.avenir-roman {
-  font-family: $avenir-roman;
-}
-
-$course-card-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.1);
-$gray-blue: #7599ad;
-$gray: #6e7e8c;
-$light-gray: #e8e8e8;
-$padding-base: 30px;
-
-.before-content:before {
-  content: "";
-  display: table;
-}
-
-.profile-padding-base {
-  padding: $padding-base;
-}
-
-body {
-  background-color: #fff;
-  font-family: $input-font-family;
-}
-
-.display-block {
-  display: block;
-}
-.display-none {
-  display: none;
-}
-.text-center {
-  text-align: center;
-}
-.no-margin {
-  margin: 0;
-}
-
 .profile-container {
+  font-family: $input-font-family;
   padding-top: $padding-base;
   padding-bottom: $padding-base;
 
@@ -237,16 +132,15 @@ body {
       padding-bottom: 30px;
     }
     label {
+      @extend %defaultLabel;
       display: block;
-      font-size: 12px;
       color: $gray;
       font-family: $avenir-book;
     }
 
     input {
       display: block;
-      font-family: $avenir-roman;
-      font-size: 16px;
+      @extend %defaultInput;
     }
 
     input.readonly {

@@ -1,36 +1,17 @@
-$body-font-family:                   "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$bold-font-family:                   "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$medium-font-family:                 "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$button-font:                        "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$header-font-family:                 "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$footer-title-font-family:           "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$footer-body-font-family:            "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$banner-font-family:                 "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$course-card-title-font-family:      "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$course-card-body-font-family:       "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$search-title-font-family:           "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$button-font-family:                 "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$input-font-family:                  "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
 
-
-$avenir-book:                   "Avenir Book", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$avenir-heavy:                   "Avenir Heavy", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$avenir-medium:                 "Avenir Medium", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-$avenir-roman:       "Avenir Roman", Helvetica, Arial, Nimbus Sans L, sans-serif !important;
-
-body, h1, p {
-  font-family: $avenir-medium;
-}
-body {
+body.register {
   background-image: url(https://wallpaperstudio10.com/static/wpdb/wallpapers/3840x2160/169546.jpg); 
-  // background-size: 100%;
+  // backgroundz-size: 100%;
   // background-repeat: no-repeat;
 }
-.bs-container {
+.register .bs-container {
   background-color: white;
   width: 80%;
 }
 .wrapper-register {
+  h1, p {
+    font-family: $avenir-medium;
+  }
   padding-bottom: 60px; 
   hr {
     height: 1px;
@@ -43,11 +24,7 @@ body {
   }
   input[type="text"],
   input[type="password"] {
-    border: 0;
-    outline: 0;
-    border-bottom: 1px solid #CACFCB;
-    font-size: 16px;
-    background-color: white;
+    @extend %defaultInput;
     padding-top: 5px;
   }
   select {
@@ -56,12 +33,10 @@ body {
     border-color: #596773;
   }
   .label-input {
-    color: #8fa0a8;
+    @extend %defaultLabel;
     padding-top: 20px;
     text-align: left;
     display: block;
-    font-size: 12px;
-    font-family: $avenir-roman;
   }
   .checkbox {
     margin-right: 10px;
@@ -84,35 +59,37 @@ body {
     font-weight: 700;
     transition: transform .5s ease;
   }
+
+  .inputs {
+    width: 100%; 
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: $avenir-medium;
+  }
+  .dropdown {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.29375em;
+    border: 1px solid #596773;
+    padding: 8px 10px;
+    background-color: #fff;
+    color: #596773;
+    width: 100%;
+    display: block;
+    margin-bottom: 1.35294em;
+    margin-top: 1em;
+  }
+  .form-registration {
+    label{
+      &:first-child {
+        padding-top: 0px;
+      }
+    } 
+  }
 }
-.inputs {
-  width: 100%; 
-  margin-bottom: 5px;
-  font-size: 14px;
-  font-family: $avenir-medium;
-}
-.dropdown {
-  box-sizing: border-box;
-  font-size: 14px;
-  line-height: 1.29375em;
-  border: 1px solid #596773;
-  padding: 8px 10px;
-  background-color: #fff;
-  color: #596773;
-  width: 100%;
-  display: block;
-  margin-bottom: 1.35294em;
-  margin-top: 1em;
-}
-.form-registration {
-  label{
-    &:first-child {
-      padding-top: 0px;
-    }
-  } 
-}
+
 @media (min-width: 992px) {
-  .bs-container {
+  .register .bs-container {
     margin-top: 60px;
     margin-bottom: 60px;
     padding: 80px;

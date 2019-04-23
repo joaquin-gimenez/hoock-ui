@@ -1,0 +1,34 @@
+.avenir-book {
+  font-family: $avenir-book;
+}
+.avenir-heavy {
+  font-family: $avenir-heavy;
+}
+.avenir-medium {
+  font-family: $avenir-medium;
+}
+.avenir-roman {
+  font-family: $avenir-roman;
+}
+
+.before-content:before {
+  content: "";
+  display: table;
+}
+
+.display-block {
+  display: block;
+}
+.display-none {
+  display: none;
+}
+.text-center {
+  text-align: center;
+}
+.no-margin {
+  margin: 0;
+}
+
+.profile-padding-base {
+  padding: $padding-base;
+}
