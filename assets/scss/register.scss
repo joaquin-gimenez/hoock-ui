@@ -10,7 +10,7 @@ body.register {
 }
 .wrapper-register {
   h1, p {
-    font-family: $avenir-medium;
+    @extend  %avenir-medium;
   }
   padding-bottom: 60px; 
   hr {
@@ -44,7 +44,7 @@ body.register {
   .review {
     margin-left: 25px;
     color: #3da9d2;
-    font-family: $avenir-medium;
+    @extend  %avenir-medium;
   }
   .a--course-about-01__courseware-btn {
     font-size: .94118em;
@@ -64,7 +64,7 @@ body.register {
     width: 100%; 
     margin-bottom: 5px;
     font-size: 14px;
-    font-family: $avenir-medium;
+    @extend  %avenir-medium;
   }
   .dropdown {
     box-sizing: border-box;

@@ -1,0 +1,16 @@
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.glyphicon-pencil:before {
+  content: "\270f"; }
+
+.glyphicon-remove:before {
+  content: "\e014"; }

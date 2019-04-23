@@ -1,14 +1,26 @@
 .avenir-book {
-  font-family: $avenir-book;
+  @extend %avenir-book;
 }
-.avenir-heavy {
-  font-family: $avenir-heavy;
-}
-.avenir-medium {
-  font-family: $avenir-medium;
+.avenir-book-oblique {
+  @extend %avenir-book-oblique;
 }
 .avenir-roman {
-  font-family: $avenir-roman;
+  @extend %avenir-roman;
+}
+.avenir-roman-oblique {
+  @extend %avenir-roman-oblique;
+}
+.avenir-medium {
+  @extend %avenir-medium;
+}
+.avenir-medium-oblique {
+  @extend %avenir-medium-oblique;
+}
+.avenir-heavy {
+  @extend %avenir-heavy;
+}
+.avenir-heavy-oblique {
+  @extend %avenir-heavy-oblique;
 }
 
 .before-content:before {

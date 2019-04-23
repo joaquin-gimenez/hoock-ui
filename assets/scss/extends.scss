@@ -1,14 +1,64 @@
+
+
+%avenir-book {
+  font-family: $body-font-family;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%avenir-book-oblique {
+  font-family: $body-font-family;
+  font-weight: 300;
+  font-style: italic;
+}
+
+%avenir-roman {
+  font-family: $body-font-family;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%avenir-roman-oblique {
+  font-family: $body-font-family;
+  font-weight: 400;
+  font-style: italic;
+}
+
+%avenir-medium {
+  font-family: $body-font-family;
+  font-weight: 500;
+  font-style: normal;
+}
+
+%avenir-medium-oblique {
+  font-family: $body-font-family;
+  font-weight: 500;
+  font-style: italic;
+}
+
+%avenir-heavy {
+  font-family: $body-font-family;
+  font-weight: 700;
+  font-style: normal;
+}
+
+%avenir-heavy-oblique {
+  font-family: $body-font-family;
+  font-weight: 700;
+  font-style: italic;
+}
+
 %defaultInput {
   border: 0;
   outline: 0;
   border-bottom: 1px solid #CACFCB;
   background-color: white;
   font-size: 16px;
-  font-family: $avenir-roman;
+  @extend  %avenir-roman;
 }
 
 %defaultLabel {
   color: $gray;
   font-size: 12px;
-  font-family: $avenir-roman;
+  @extend  %avenir-roman;
 }

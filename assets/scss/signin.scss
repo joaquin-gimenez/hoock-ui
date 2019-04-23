@@ -1,5 +1,5 @@
 
 .wrapper-signin {
-    font-family: $avenir-heavy;
+    @extend  %avenir-heavy;
     font-weight: bold;
 }
