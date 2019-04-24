@@ -32,9 +32,7 @@
                   <span class="achievements__data--number">1500</span>
                 </div>
                 <div class="achievements__data col-sm-4">
-                  <span class="achievements__data--title"
-                    >MISSIONS COMPLETED</span
-                  >
+                  <span class="achievements__data--title">MISSIONS COMPLETED</span>
                   <span class="achievements__data--number">47</span>
                 </div>
               </div>
@@ -70,7 +68,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="profile-about-field-wrapper col-sm-4">
+              <div class="profile-about-field-wrapper col-xs-12 col-sm-4">
                 <label for="">FIRST NAME</label>
                 <input
                   type="text"
@@ -79,7 +77,7 @@
                   readonly
                 />
               </div>
-              <div class="profile-about-field-wrapper col-sm-4">
+              <div class="profile-about-field-wrapper col-xs-12 col-sm-4">
                 <label for="">LAST NAME</label>
                 <input
                   type="text"
@@ -90,7 +88,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="profile-about-field-wrapper col-sm-4">
+              <div class="profile-about-field-wrapper col-xs-12 col-sm-4">
                 <label for="">COMPANY/INSTITUTION</label>
                 <input
                   type="text"
@@ -99,7 +97,7 @@
                   readonly
                 />
               </div>
-              <div class="profile-about-field-wrapper col-sm-4">
+              <div class="profile-about-field-wrapper col-xs-12 col-sm-4">
                 <label for="">ROLE</label>
                 <input
                   type="text"
@@ -110,7 +108,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="profile-about-field-wrapper col-sm-4">
+              <div class="profile-about-field-wrapper col-xs-12 col-sm-4">
                 <label for="">EMAIL</label>
                 <input
                   type="text"
@@ -122,7 +120,7 @@
             </div>
 
             <div class="row">
-              <div class="profile-about-field-wrapper col-sm-4">
+              <div class="profile-about-field-wrapper col-xs-12 col-sm-4">
                 <label for="">MEMBER SINCE</label>
                 <input
                   type="text"
@@ -132,12 +130,32 @@
                 />
               </div>
             </div>
+            <div class="row">
+              <div class="col-xs-12 text-right">
+                <input type="submit" value="SAVE" class="btn-orange-small save-profile"/>
+              </div>
+            </div>
           </form>
         </div>
         <div class="profile__right col-md-4">
           <div class="profile-ranking before-content profile-padding-base">
             <h3>Ranking</h3>
-            <div class="profile-ranking-progress"></div>
+            <div class="profile-ranking-progress">
+              <svg viewBox="0 0 36 36" class="ranking-chart">
+                <path class="ranking-chart__circle-bg"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path class="ranking-chart__circle"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                  stroke-dasharray="75, 100"
+                />
+                <image class="ranking-chart__circle-img" x="9" y="10.17" xlink:href="/assets/img/helmet.jpg"/>
+              </svg>
+            </div>
             <h3>Lorem Ipsum</h3>
             <p class="avenir-book">LOREM IPSUM Dolor sit amet</p>
             <p class="avenir-book-oblique">LOREM IPSUM Dolor sit amet</p>

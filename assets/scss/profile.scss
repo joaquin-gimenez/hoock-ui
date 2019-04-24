@@ -13,6 +13,32 @@
     font-weight: normal;
   }
 
+  .ranking-chart { 
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+  }
+  .ranking-chart__circle-bg {
+    fill: none;
+    stroke: $light-gray;
+    stroke-width: 3;
+  }
+  .ranking-chart__circle {
+    stroke: $green;
+    fill: none;
+    stroke-width: 3;
+    animation: progress 1s ease-out forwards;
+  }
+  .ranking-chart__circle-img {
+    width: 50%;
+  }
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+
   .profile-overview,
   .profile-about,
   .profile-ranking,
@@ -137,19 +163,12 @@
       color: $gray;
       @extend %avenir-book;
     }
-
-    input {
+    input[type=text] {
       display: block;
+      width: 100%;
       @extend %defaultInput;
     }
 
-    input.readonly {
-      border: none;
-      &:focus {
-        outline: none;
-        cursor: default;
-      }
-    }
   }
 
   .profile__data {
