@@ -46,19 +46,6 @@ body.register {
     color: #3da9d2;
     @extend  %avenir-medium;
   }
-  .a--course-about-01__courseware-btn {
-    font-size: .94118em;
-    line-height: 1.29375em;
-    padding: 8px 25px;
-    color: #fff;
-    background-color: #ff9934;
-    border: 1px solid #ff9934;
-    border-radius: 40px;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 700;
-    transition: transform .5s ease;
-  }
 
   .inputs {
     width: 100%; 
